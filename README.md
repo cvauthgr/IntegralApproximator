@@ -20,7 +20,7 @@ g++ -std=c++23 -o integralCalculator integralCalculator.cpp
 
 ### Example 
 
-Let's say we want to integrate the function `f(x)=e^(-x^2)` inside the domain {0,1} (inclusive) but it's antiderivative cannot be expressed using elementary functions. So we are going to approximate it !!!
+Let's say we want to integrate the function `f(x)=e^(-x^2)` inside the domain [0,1] (inclusive) but it's antiderivative cannot be expressed using elementary functions. So we are going to approximate it !!!
 
 #### Step 1 : 
 
@@ -58,6 +58,21 @@ Our program takes a given interval and partitions it in N-th subintervals of equ
 
 As well as the approximation we get an error margin of 95% confidence which gives a bound of how far the approximation will likely be from the real value . By treating the function's values as statistical samples we are able to calculate the mean ,
 variance and the standard error , which is later multiplied by 1.96 ( for the 95% confidence ) giving us that error margin .
+
+### Some timed tests
+
+Integrating e^(-x^2) over [0,1] with 100 million and 1 billion subpartiotions respectively :
+
+1)100 million intervals 
+
+<img width="864" height="647" alt="Screenshot 2026-06-12 200802" src="https://github.com/user-attachments/assets/2a5dda8a-10a4-4fb8-b26d-06bd1c5ea491" />
+
+2)1 billion intervals
+
+<img width="868" height="652" alt="Screenshot 2026-06-12 200809" src="https://github.com/user-attachments/assets/bd5534ab-87bf-4642-a3f8-705f7fd7fddc" />
+
+
+Time complexity : Scales linearly , O(n) 
 
 ### Future features
 
