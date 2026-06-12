@@ -41,7 +41,7 @@ public:
                 std::cin.clear() ;
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n') ;
             }
-        }while( m_bounds.first > m_bounds.second ) ;
+        }while( m_bounds.first > m_bounds.second || std::cin.fail() ) ;
             
     }
     
@@ -57,7 +57,7 @@ public:
             std::cin.clear() ;
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n') ;
         }
-        }while( m_numberOfIntervals <= 0);
+        }while( m_numberOfIntervals <= 0 || std::cin.fail() );
         
     } 
 
