@@ -1,9 +1,11 @@
 #pragma once
 
+#include <ios>
 #include <iostream>
 #include <functional>
 #include <cmath>
 #include <iomanip>
+#include <limits>
 #include "randomGeneration.h"
 
 class Integral
@@ -26,26 +28,38 @@ public:
     double func( double x ){ return std::exp(x) ; }
 
     void getBounds(){
+
+        do{
         std::cout << "Lower bound : " ;
         std::cin >> m_bounds.first ;
         std::cout << "Upper bound : " ;
         std::cin >> m_bounds.second ;
 
-        if( m_bounds.first > m_bounds.second ){
-            std::cout << "It is required that lowerBound<upperBound !\n" ;
-            this->getBounds() ;
-        }
+            if( m_bounds.first > m_bounds.second || std::cin.fail() )
+            {
+                std::cout << "It is required that lowerBound<upperBound !\n" ;
+                std::cin.clear() ;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n') ;
+            }
+        }while( m_bounds.first > m_bounds.second ) ;
+            
     }
     
     void getNumberOfIntervals(){
+
+        do{
         std::cout << "Give the number of intervals (higher the number -> higher accuracy) : " ;
         std::cin >> m_numberOfIntervals ;
 
-        if( m_numberOfIntervals <= 0 ){
+        if( m_numberOfIntervals <= 0 || std::cin.fail() )
+        {
             std::cout << "Number of intervals has to be > 0 !\n" ;
-            this->getNumberOfIntervals() ;
+            std::cin.clear() ;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n') ;
         }
-    } ;
+        }while( m_numberOfIntervals <= 0);
+        
+    } 
 
     void setSizeOfIntervals(){ m_sizeofBoundsInterval = (m_bounds.second-m_bounds.first)/m_numberOfIntervals ; }
     
