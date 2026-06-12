@@ -20,7 +20,7 @@ g++ -std=c++23 -o integralCalculator integralCalculator.cpp
 
 ### Example 
 
-Let's say we want to integrate the function `f(x)=e^(-x^2)` inside the domain {0,1} (inclusive) which cannot be computed analytically only approximated.
+Let's say we want to integrate the function `f(x)=e^(-x^2)` inside the domain {0,1} (inclusive) but it's antiderivative cannot be expressed using elementary functions. So we are going to approximate it !!!
 
 #### Step 1 : 
 
