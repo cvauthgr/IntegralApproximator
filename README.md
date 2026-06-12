@@ -43,6 +43,17 @@ Now you can execute the program as per the instructions dictate :
 <img width="967" height="217" alt="image" src="https://github.com/user-attachments/assets/12e808a5-95c5-49f7-b84f-74de4724ed73" />
 
 
+
 The bounds are user defined and can be accurate untill 15 digits after 0 . We get the approximation and also an error margin of 95% confidence which is acceptable for those types of monte carlo approximations 
 
-# Why does it work ( Theory behind it )
+# Why does it work(Theory behind it)
+
+The program utilizes the Riemann definition of the definitive integral(not the Darboux one).
+
+The definition is here [Click here to view the theory](RiemannDefinition.pdf) i have it in a LaTex pdf i made .
+
+Our program takes a given interval and partitions it in N-th subintervals of equal size. Then in each one of them picks a random point (it can be the edges too) and passes it to our function . The function returns it's value which is then multiplied by the length of the respecting subinterval it is in . This calculation is added to our approximation and. This happens N times until the program finishes execution .
+
+### Future features
+
+1)In the feature I am planning to add a mathematical function parser 
