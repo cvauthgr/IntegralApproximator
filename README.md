@@ -62,27 +62,18 @@ As well as the approximation we get an error margin of 95% confidence which give
 
 ### Some timed tests
 
-Integrating e^(-x^2) over [0,1] with 100 million and 1 billion subpartitions respectively :
-
-1)100 million intervals 
-
-<img width="864" height="647" alt="Screenshot 2026-06-12 200802" src="https://github.com/user-attachments/assets/2a5dda8a-10a4-4fb8-b26d-06bd1c5ea491" />
-
-2)1 billion intervals
-
-<img width="868" height="652" alt="Screenshot 2026-06-12 200809" src="https://github.com/user-attachments/assets/bd5534ab-87bf-4642-a3f8-705f7fd7fddc" />
-
-Time complexity : Scales linearly , O(n) 
-
-### Some timed tests
 
 Integrating e^(-x^2) over [0,1] with 100 million and 1 billion subpartiotions respectively :
 
+
 1)100 million intervals 
+
 
 <img width="864" height="647" alt="Screenshot 2026-06-12 200802" src="https://github.com/user-attachments/assets/2a5dda8a-10a4-4fb8-b26d-06bd1c5ea491" />
 
+
 2)1 billion intervals
+
 
 <img width="868" height="652" alt="Screenshot 2026-06-12 200809" src="https://github.com/user-attachments/assets/bd5534ab-87bf-4642-a3f8-705f7fd7fddc" />
 
