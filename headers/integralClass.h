@@ -53,7 +53,7 @@ public:
     {
         for(int index { };index < m_numberOfIntervals;++ index)
         {
-            double valueOfFunc { func(prng::getReal(m_sizeofBoundsInterval*index,m_sizeofBoundsInterval*(index+1))) } ; 
+            double valueOfFunc { func(prng::getReal(m_bounds.first + m_sizeofBoundsInterval*index, m_bounds.first + m_sizeofBoundsInterval*(index+1))) } ; 
             m_valueOfIntegral += valueOfFunc*(m_sizeofBoundsInterval*(index+1)-m_sizeofBoundsInterval*index) ;
             m_sigma1 += valueOfFunc ;
             m_sigma2 += valueOfFunc*valueOfFunc ;
