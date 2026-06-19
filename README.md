@@ -1,5 +1,8 @@
 # IntegralApproximator
 
+![C++23](https://img.shields.io/badge/C%2B%2B23-00599C?logo=cplusplus&logoColor=white)
+![Make](https://img.shields.io/badge/Make-A42E2B?logo=gnu&logoColor=white)
+
 ### What is this program
 
 This program is a Monte Carlo integral approximator written in C++23 with no external dependencies . We can use it to approximate integrals over closed real-valued intervals of functions that cannot be computed analytically .
